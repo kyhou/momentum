@@ -323,7 +323,7 @@ export default {
             user: JSON.parse(localStorage.getItem('user')),
             today: new Date().getDate(),
             contractIds: [],
-            percentageBalanceLastMonth: "3,48%",
+            percentageBalanceLastMonth: "0,00%",
             percentagePerformanceLastMonth: "0%",
             percentagePerformanceTotal: "0,00%",
             expertBalancePercentage: 0,
