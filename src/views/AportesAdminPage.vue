@@ -50,6 +50,16 @@
                                 </div>
 
                                 <div>
+                                    <label class="text-gray-700 dark:text-gray-200" for="type">Tipo</label>
+                                    <Field id="type" name="type" as="select"
+                                        class="form-control select select-bordered select-accent mt-2 block w-full max-w-xs px-4 py-2 ">
+                                        <option value="expert">Expert</option>
+                                        <option value="security">Security</option>
+                                    </Field>
+                                    <ErrorMessage name="type" class="text-error" />
+                                </div>
+
+                                <div>
                                     <label class="label cursor-pointer">
                                         <span class="label-text">Ativo</span>
                                         <input v-model="active" id="active" name="active" type="checkbox"
@@ -93,7 +103,7 @@
 
         <v-grid id="revo-grid" :exporting="true" :filter="true" :auto-size-column="{
             mode: 'headerClickAutoSize'
-        }" :resize="true" theme="darkMaterial" :source="rows" :columns="columns" />
+        }" :resize="true" theme="material" :source="rows" :columns="columns" />
     </Page>
 </template>
 
@@ -172,6 +182,13 @@ export default {
                     autoSize: true,
                     size: 80,
                     cellCompare: this.numericSort,
+                },
+                {
+                    prop: "type",
+                    name: "Tipo",
+                    sortable: true,
+                    autoSize: true,
+                    size: 100,
                 },
                 {
                     prop: "locked",
@@ -409,6 +426,7 @@ export default {
                 date: moment(props.model.date, "DD/MM/YYYY").format("YYYY-MM-DD"),
                 locked: props.model.locked,
                 active: props.model.active,
+                type: props.model.type,
                 editMode: true
             });
 
