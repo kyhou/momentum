@@ -31,7 +31,8 @@ class AuthService {
         password: user.password,
         roles: user.roles,
         firstName: user.firstName,
-        lastName: user.lastName
+        lastName: user.lastName,
+        type: user.type
       }
     );
   }
