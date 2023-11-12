@@ -380,7 +380,10 @@ export default {
                     }
 
                     this.totalBalance += +element.availableProfit + +element.value;
-                    lastMonthProfitGlobal += +element.monthProfits[element.monthProfits.length - 1].profit;
+                    
+                    if (element.monthProfits && element.monthProfits.length > 0) {
+                        lastMonthProfitGlobal += +element.monthProfits[element.monthProfits.length - 1].profit;
+                    }
                 });
                 this.percentageBalanceLastMonth = `${(((this.totalBalance / lastMonthProfitGlobal) - 1) * 100).toFixed(2)}%`;
 
