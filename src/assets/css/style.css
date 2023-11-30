@@ -194,13 +194,13 @@ body .main {
 }
 
 .hr-title {
-  width: 15%;
-  border-top: 2px solid hsl(var(--a)) !important
+  width: 20%;
+  border-top: 2px solid hsl(var(--a));
 }
 
 .vl-divider {
   width: 2px;
-  border-left: 2px solid hsl(var(--a)) !important;
+  /* border-left: 2px solid hsl(var(--n)) !important; */
   height: 60px;
   position: relative;
   margin: -30px auto;
@@ -314,4 +314,67 @@ body.modal-open {
   --accordion: var(--p);
   --invested-value: 0, 0% 100%;
   --footer: var(--s);
+}
+
+@font-face {
+  font-family: 'Dubai Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dubai Regular'), url('../fonts/Dubai-Regular.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Dubai Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dubai Light'), url('../fonts/Dubai-Light.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Dubai Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dubai Medium'), url('../fonts/Dubai-Medium.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Dubai Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dubai Bold'), url('../fonts/Dubai-Bold.woff') format('woff');
+}
+
+.gg-arrow-down {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 80px
+}
+.gg-arrow-down::after,
+.gg-arrow-down::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 4px;
+  color: white;
+}
+.gg-arrow-down::after {
+  width: 16px;
+  height: 16px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(-45deg);
+  left: 3px
+}
+.gg-arrow-down::before {
+  width: 2px;
+  height: 80px;
+  left: 10px;
+  background: currentColor
 }

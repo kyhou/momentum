@@ -1,18 +1,20 @@
 <template>
-    <Tradingview :class="loading ? 'opacity-0' : ''" />
     <div v-if="!loading">
         <Page>
-            <section id="hero" class="body-font bg-primary">
+            <section id="hero" class="body-font bg-primary" style="font-family:'Dubai Regular'">
                 <div class="hero-bg-image sm:sm-hero-bg-image md:max-lg:bg-pos-75-20 hero bg-secondary">
                     <!-- bg-[url('/src/assets/imgs/hero.jpg')] -->
                     <div class="hero-content flex w-full flex-wrap gap-0 pb-0">
-                        <div class="basis-[95%] lg:basis-1/2" data-aos="slide-right">
-                            <hr class="hr-title w-[70px]" />
-                            <h1 class="py-6 text-[42px] font-bold uppercase leading-[55px] text-white">Eleve seu portfólio
+                        <div class="basis-[95%] lg:basis-5/12" data-aos="slide-right">
+                            <!-- <hr class="hr-title w-[70px]" /> -->
+                            <h1 class="px-3 pt-6 text-4xl font-extrabold uppercase leading-[55px] text-white"
+                                style="font-family:'Dubai Bold'">Eleve seu portfólio
                                 com ativos que rendem</h1>
-                            <h1 class="pb-6 text-4xl font-bold uppercase text-white"><span class="bg-[#fabd05]">acima de 18%
+                            <h1 class="pb-6 text-4xl font-bold uppercase text-white" style="font-family:'Dubai Bold'"><span
+                                    class="bg-[#fabd05] px-3">acima de 18%
                                     ao ano.</span></h1>
-                            <span class="text-white">Nossa prioridade é preservar, adaptar ao perfil e às necessidades de
+                            <span class="text-xl font-semibold text-white">Nossa prioridade é preservar, adaptar ao perfil e
+                                às necessidades de
                                 cada cliente, buscando as melhores oportunidades de investimento local e
                                 internacional.</span>
                             <div class="div mt-10 flex flex-wrap">
@@ -28,217 +30,100 @@
                 </div>
             </section>
 
-            <section>
+            <section class="bg-[#181818] tracking-widest" style="font-family:'Dubai Regular'">
                 <div class="lg:flex lg:flex-wrap">
                     <div class="p-4 lg:w-1/3" data-aos="zoom-in">
                         <div class="flex flex-wrap items-center justify-center p-8">
-                            <FontAwesomeIcon icon="fa-handshake" class="h-20 text-warning" />
-                            <h2 class="title-font ml-3 text-lg uppercase text-white">Renda <span class="font-bold">Fixa</span></h2>
+                            <!-- <FontAwesomeIcon icon="fa-handshake" class="h-20 text-warning" /> -->
+                            <img class="h-20" src="/src/assets/imgs/porquin.svg" />
+                            <h2 class="title-font ml-3 text-lg uppercase text-white">Renda<br /><span
+                                    class="font-bold">Fixa</span></h2>
                         </div>
                     </div>
                     <div class="p-4 lg:w-1/3" data-aos="zoom-in">
                         <div class="flex flex-wrap items-center justify-center p-8">
-                            <FontAwesomeIcon icon="fa-handshake" class="h-20 text-warning" />
-                            <h2 class="title-font ml-3 text-lg uppercase text-white">Renda <span class="font-bold">Variável</span></h2>
+                            <img class="h-20" src="/src/assets/imgs/graf.svg" />
+                            <h2 class="title-font ml-3 text-lg uppercase text-white">Renda<br /><span
+                                    class="font-bold">Variável</span></h2>
                         </div>
                     </div>
                     <div class="p-4 lg:w-1/3" data-aos="zoom-in">
                         <div class="flex flex-wrap items-center justify-center p-8">
-                            <FontAwesomeIcon icon="fa-handshake" class="h-20 text-warning" />
-                            <h2 class="title-font ml-3 text-lg uppercase text-white">Outras <span class="font-bold">Soluções</span></h2>
+                            <img class="h-20" src="/src/assets/imgs/lamp.svg" />
+                            <h2 class="title-font ml-3 text-lg uppercase text-white">Outras<br /><span
+                                    class="font-bold">Soluções</span></h2>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <div class="vl-divider" />
+            <section class="flex justify-center bg-secondary">
+                <div
+                    class="flex h-[30rem] w-full justify-center bg-[url('/src/assets/imgs/circulo.png')] bg-center bg-no-repeat max-sm:bg-[length:400px_200px] lg:mt-32 lg:h-[30rem] lg:max-w-[80rem]">
+                    <div
+                        class="mt-44 w-full text-center text-[3rem] uppercase leading-none text-white lg:mt-28 lg:text-[6rem]">
+                        Este é o seu<br /><span class="text-[4rem] font-bold lg:text-[9rem]"
+                            style="font-family:'Dubai Bold'">momento</span></div>
+                </div>
+            </section>
 
-            <section id="about" class="body-font bg-secondary text-white">
+            <div class="vl-divider pt-5">
+                <i class="gg-arrow-down"></i>
+            </div>
 
-                <!-- Put this part before </body> tag -->
-                <input type="checkbox" id="modal-partnership" class="modal-toggle" @click="toggleModal()" />
-                <label for="modal-partnership" class="modal">
-                    <div class="modal-box p-0">
-                        <label for="modal-partnership" class="btn btn-circle btn-sm absolute right-2 top-2">✕</label>
-                        <div class="h-auto">
-                            <img src="../assets/imgs/parcerias2.png" alt="Parcerias">
-                            <div class="p-6">
-                                <hr class="hr-title" />
-                                <h1 class="title-font mb-3 text-xl font-bold text-white">Parcerias</h1>
-                                <p class="mb-3 leading-relaxed">Construindo parcerias há 4 anos. A história do Grupo HV
-                                    começou com a colaboração de nossos clientes e outros parceiros de negócios. Com a
-                                    expansão do grupo, contamos com a parceria de grandes construtoras e imobiliárias do
-                                    Norte e Litoral de Santa Catarina.</p>
-                            </div>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- Put this part before </body> tag -->
-                <input type="checkbox" id="modal-family" class="modal-toggle" @click="toggleModal()" />
-                <label for="modal-family" class="modal">
-                    <div class="modal-box p-0">
-                        <label for="modal-family" class="btn btn-circle btn-sm absolute right-2 top-2">✕</label>
-                        <div class="h-auto">
-                            <img src="../assets/imgs/familia2.jpg" alt="Uma empresa de família">
-                            <div class="p-6">
-                                <hr class="hr-title" />
-                                <h1 class="title-font mb-3 text-xl font-bold text-white">Uma empresa de família </h1>
-                                <p class="mb-3 leading-relaxed">Da nossa família para a sua! Queremos levar prosperidade
-                                    e educação financeira para todos. Somos uma empresa familiar e temos como foco a
-                                    entrega de resultados, por isso, todos são capacitados e comprometidos com o
-                                    crescimento.</p>
-                            </div>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- Put this part before </body> tag -->
-                <input type="checkbox" id="modal-god" class="modal-toggle" @click="toggleModal()" />
-                <label for="modal-god" class="modal">
-                    <div class="modal-box p-0">
-                        <label for="modal-god" class="btn btn-circle btn-sm absolute right-2 top-2">✕</label>
-                        <div class="h-auto">
-                            <img src="../assets/imgs/Deus2.png" alt="Deus é tudo">
-                            <div class="p-6">
-                                <hr class="hr-title" />
-                                <h1 class="title-font mb-3 text-xl font-bold text-white">Deus primeiro</h1>
-                                <p class="mb-3 leading-relaxed">Nossa preocupação não é somente a geração de riqueza.
-                                    Acreditamos que podemos fazer a diferença na sociedade como um todo. Por isso,
-                                    também investimos no âmbito
-                                    social, como o nosso projeto de
-                                    doação de cestas básicas em igrejas locais.</p>
-                            </div>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- Put this part before </body> tag -->
-                <input type="checkbox" id="modal-real-estate" class="modal-toggle" @click="toggleModal()" />
-                <label for="modal-real-estate" class="modal">
-                    <div class="modal-box p-0">
-                        <label for="modal-real-estate" class="btn btn-circle btn-sm absolute right-2 top-2">✕</label>
-                        <div class="h-auto">
-                            <img src="../assets/imgs/imobiliario2.png" alt="Mercado imobiliário">
-                            <div class="p-6">
-                                <hr class="hr-title" />
-                                <h1 class="title-font mb-3 text-xl font-bold text-white">Mercado imobiliário</h1>
-                                <p class="mb-3 leading-relaxed">Em nossa gestão de patrimônio, adquirimos apenas imóveis
-                                    de alto padrão. Garantindo um lastro imobiliário aos nossos clientes. Em nosso
-                                    portfólio, possuímos (até o momento) unidades do mais alto padrão de empreiteiras
-                                    como DAXO, Santer e Rôgga.</p>
-                            </div>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- Put this part before </body> tag -->
-                <input type="checkbox" id="modal-futures" class="modal-toggle" @click="toggleModal()" />
-                <label for="modal-futures" class="modal">
-                    <div class="modal-box p-0">
-                        <label for="modal-futures" class="btn btn-circle btn-sm absolute right-2 top-2">✕</label>
-                        <div class="h-auto">
-                            <img src="../assets/imgs/futuros2.png" alt="Mercado nacional">
-                            <div class="p-6">
-                                <hr class="hr-title" />
-                                <h1 class="title-font mb-3 text-xl font-bold text-white">Mercado nacional</h1>
-                                <p class="mb-3 leading-relaxed">Um dos mercados em que operamos é o Mercado
-                                    Futuro na Bolsa de Valores (B3). O mercado de contratos futuros
-                                    serve como instrumento de proteção financeira, bem como possibilita a rentabilização
-                                    do capital de forma alavancada. Resumidamente, trata-se de um ativo de renda
-                                    variável, onde são feitas negociações em uma data futura.</p>
-                            </div>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- Put this part before </body> tag -->
-                <input type="checkbox" id="modal-forex" class="modal-toggle" @click="toggleModal()" />
-                <label for="modal-forex" class="modal">
-                    <div class="modal-box p-0">
-                        <label for="modal-forex" class="btn btn-circle btn-sm absolute right-2 top-2">✕</label>
-                        <div class="h-auto">
-                            <img src="../assets/imgs/forex2.png" alt="Mercado internacional">
-                            <div class="p-6">
-                                <hr class="hr-title" />
-                                <h1 class="title-font mb-3 text-xl font-bold text-white">Mercado internacional</h1>
-                                <p class="mb-3 leading-relaxed">Além do Mercado Futuro na B3, operamos também no mercado
-                                    de câmbio, através do FOREX. O FOREX é um mercado financeiro descentralizado, e é o
-                                    maior mercado de câmbio do mundo. No quesito volume de dinheiro, o FOREX movimenta o
-                                    equivalente a mais de 5 trilhões de dólares americanos, todos os dias.</p>
-                            </div>
-                        </div>
-                    </div>
-                </label>
-
+            <section id="about" class="body-font bg-secondary px-36 pt-36 text-white" style="font-family:'Dubai Regular'">
                 <div class="w-full px-5 py-24 lg:px-10">
                     <div class="items-left mb-20  flex flex-col flex-wrap text-left" data-aos="slide-right">
-                        <hr class="hr-title mb-5" style="width: 70px;" />
-                        <h1 class="title-font text-4xl font-bold text-white">Sobre nós</h1>
-                        <p class="w-full font-bold uppercase leading-relaxed text-accent lg:w-1/2">Clique e conheça mais
-                            sobre o grupo hv</p>
+                        <h1 class="title-font text-4xl font-bold text-white">Como funciona a</h1>
+                        <br />
+                        <h1 class="title-font text-[8rem] font-bold uppercase leading-none text-white"
+                            style="font-family:'Dubai Bold'">Momentum</h1>
                     </div>
-                    <div class="-m-4 flex flex-wrap">
-                        <label for="modal-partnership" class="p-4 md:w-1/2 xl:w-1/3" data-aos="slide-up">
-                            <div
-                                class="before:bg-about-1 cursor-pointer p-6 before:bg-[url('/src/assets/imgs/parcerias.jpg')] before:grayscale before:transition before:duration-300 before:ease-out before:hover:opacity-100 before:hover:grayscale-0">
-                                <hr class="hr-title" />
-                                <h2 class="title-font mb-2 text-lg font-medium text-white">Parcerias</h2>
-                                <p class="text-base leading-relaxed">Construindo parcerias há 4 anos. A história do
-                                    Grupo HV começou com a colaboração [...]</p>
-                            </div>
-                        </label>
-                        <label for="modal-family" class="p-4 md:w-1/2 xl:w-1/3" data-aos="slide-up">
-                            <div
-                                class="before:bg-about-1 before:bg-about-2 cursor-pointer p-6 before:bg-[url('/src/assets/imgs/familia3.jpg')] before:grayscale  before:transition before:duration-300 before:ease-out before:hover:opacity-100 before:hover:grayscale-0">
-                                <hr class="hr-title" />
-                                <h2 class="title-font mb-2 text-lg font-medium text-white">Uma empresa de família </h2>
-                                <p class="text-base leading-relaxed">Da nossa família para a sua! Queremos levar
-                                    prosperidade
-                                    e educação financeira [...]</p>
-                            </div>
-                        </label>
-                        <label for="modal-god" class="p-4 md:w-1/2 xl:w-1/3" data-aos="slide-up">
-                            <div
-                                class="before:bg-about-1 before:bg-about-3 cursor-pointer p-6 before:bg-[url('/src/assets/imgs/Deus.jpg')] before:grayscale before:transition before:duration-300 before:ease-out before:hover:opacity-100 before:hover:grayscale-0">
-                                <hr class="hr-title" />
-                                <h2 class="title-font mb-2 text-lg font-medium text-white">Deus primeiro</h2>
-                                <p class="text-base leading-relaxed">Nossa preocupação não é somente a geração de
-                                    riqueza. [...]
+                    <div class="-m-4 flex flex-wrap text-center">
+                        <div class="p-4 md:w-1/2 xl:w-1/4" data-aos="slide-up">
+                            <div class="h-96 border-[3px] border-white px-12">
+                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.01
                                 </p>
+                                <h2 class="title-font mb-2 text-4xl font-bold uppercase text-white"
+                                    style="font-family:'Dubai Bold'">Entender o Cliente</h2>
+                                <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
+                                <p class="text-base leading-relaxed">Quais as necessidades do cliente, objectivos, perfil de
+                                    investimentos e o seu momento de vida</p>
                             </div>
-                        </label>
-                        <label for="modal-real-estate" class="p-4 md:w-1/2 xl:w-1/3" data-aos="slide-up">
-                            <div
-                                class="before:bg-about-1 before:bg-about-6 cursor-pointer p-6 before:bg-[url('/src/assets/imgs/imobiliario.jpg')] before:grayscale before:transition before:duration-300 before:ease-out before:hover:opacity-100 before:hover:grayscale-0">
-                                <hr class="hr-title" />
-                                <h2 class="title-font mb-2 text-lg font-medium text-white">Mercado imobiliário
-                                </h2>
-                                <p class="text-base leading-relaxed">Em nossa gestão de patrimônio, adquirimos apenas
-                                    imóveis
-                                    de alto padrão [...]</p>
+                        </div>
+                        <div class="p-4 md:w-1/2 xl:w-1/4" data-aos="slide-up">
+                            <div class="h-96 border-[3px] border-white px-12">
+                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.01
+                                </p>
+                                <h2 class="title-font mb-2 text-4xl font-bold uppercase text-white"
+                                    style="font-family:'Dubai Bold'">Planejamento</h2>
+                                <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
+                                <p class="text-base leading-relaxed">Contrução de uma estratégia customizada, diversificada
+                                    e considerando as melhores alterantivas de acodo com o seu perfil de investimentos</p>
                             </div>
-                        </label>
-                        <label for="modal-futures" class="p-4 md:w-1/2 xl:w-1/3" data-aos="slide-up">
-                            <div
-                                class="before:bg-about-1 before:bg-about-4 cursor-pointer p-6 before:bg-[url('/src/assets/imgs/futuros.jpg')] before:grayscale before:transition before:duration-300 before:ease-out before:hover:opacity-100 before:hover:grayscale-0">
-                                <hr class="hr-title" />
-                                <h2 class="title-font mb-2 text-lg font-medium text-white">Mercado nacional</h2>
-                                <p class="text-base leading-relaxed">Um dos mercados em que operamos é o
-                                    Mercado
-                                    Futuro na Bolsa de Valores [...]</p>
+                        </div>
+                        <div class="p-4 md:w-1/2 xl:w-1/4" data-aos="slide-up">
+                            <div class="h-96 border-[3px] border-white px-12">
+                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.01
+                                </p>
+                                <h2 class="title-font mb-2 text-4xl font-bold uppercase text-white"
+                                    style="font-family:'Dubai Bold'">Implementação</h2>
+                                <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
+                                <p class="text-base leading-relaxed">Sekeção de produtos do mercado global da nossa
+                                    plataforma aberta de investimentos</p>
                             </div>
-                        </label>
-                        <label for="modal-forex" class="p-4 md:w-1/2 xl:w-1/3" data-aos="slide-up">
-                            <div
-                                class="50 before:bg-about-1 before:bg-about-5 cursor-pointer p-6 before:bg-[url('/src/assets/imgs/forex.jpg')] before:grayscale before:transition before:duration-300 before:ease-out before:hover:opacity-100 before:hover:grayscale-0">
-                                <hr class="hr-title" />
-                                <h2 class="title-font mb-2 text-lg font-medium text-white">Mercado internacional</h2>
-                                <p class="text-base leading-relaxed">Além do Mercado Futuro na B3, operamos também no
-                                    mercado
-                                    de câmbio [...]</p>
+                        </div>
+                        <div class="p-4 md:w-1/2 xl:w-1/4" data-aos="slide-up">
+                            <div class="h-96 border-[3px] border-white px-12">
+                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.01
+                                </p>
+                                <h2 class="title-font mb-2 text-4xl font-bold uppercase text-white"
+                                    style="font-family:'Dubai Bold'">Cenários Externos</h2>
+                                <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
+                                <p class="text-base leading-relaxed">Nossos especialistas analisam os cenários locais e
+                                    globais a cronstrução de um protifólio conforme seus objetivos</p>
                             </div>
-                        </label>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -422,54 +307,14 @@
 <script>
 import Page from '../components/Page.vue';
 import Contact from '../components/Contact.vue';
-import Tradingview from '../components/Tradingview.vue';
-// import BarChart from '../components/BarChart.vue';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import AOS from "aos";
-// import { Swiper, SwiperSlide } from "swiper/vue";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-
-// import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default {
     name: "home-page",
     components: {
         Page,
         Contact,
-        FontAwesomeIcon,
-        Tradingview,
-        // BarChart,
-        // Swiper,
-        // SwiperSlide,
     },
-    // setup() {
-    //     return {
-    //         pagination: {
-    //             clickable: true,
-    //             el: '.swiper-pagination',
-    //             bulletClass: 'swiper-pagination-bullet',
-    //             bulletActiveClass: 'swiper-pagination-bullet-active'
-    //         },
-    //         breakpoints: {
-    //             322: {
-    //                 slidesPerView: 1,
-    //             },
-    //             640: {
-    //                 slidesPerView: 1.5,
-    //             },
-    //             1024: {
-    //                 slidesPerView: 3,
-    //             },
-    //         },
-    //         autoplay: {
-    //             delay: 80000,
-    //             disableOnInteraction: false
-    //         },
-    //         modules: [Autoplay, Pagination, Navigation],
-    //     };
-    // },
     data() {
         return {
             loading: true,
@@ -491,9 +336,7 @@ export default {
     },
     mounted() {
         AOS.init();
-        setTimeout(() => {
-            AOS.refresh();
-        }, 2000);
+        AOS.refresh();
     },
     unmounted() {
         window.removeEventListener('resize', this.handleResize);
