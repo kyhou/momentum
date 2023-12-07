@@ -378,3 +378,15 @@ body.modal-open {
   left: 10px;
   background: currentColor
 }
+
+
+#circles-img::after {
+  content: "";
+  background: url('/src/assets/imgs/circles.png') no-repeat right center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100px; /* Width of your image */
+  z-index: -1;
+}

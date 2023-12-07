@@ -58,8 +58,8 @@
             </section>
 
             <section class="flex justify-center bg-secondary">
-                <div
-                    class="flex h-[30rem] w-full justify-center bg-[url('/src/assets/imgs/circulo.png')] bg-center bg-no-repeat max-sm:bg-[length:400px_200px] lg:mt-32 lg:h-[30rem] lg:max-w-[80rem]">
+                <div class="flex h-[30rem] w-full justify-center bg-[url('/src/assets/imgs/circulo.png')] bg-center bg-no-repeat max-sm:bg-[length:400px_200px] lg:mt-32 lg:h-[30rem] lg:max-w-[80rem]"
+                    data-aos="zoom-in">
                     <div
                         class="mt-44 w-full text-center text-[3rem] uppercase leading-none text-white lg:mt-28 lg:text-[6rem]">
                         Este é o seu<br /><span class="text-[4rem] font-bold lg:text-[9rem]"
@@ -71,12 +71,13 @@
                 <i class="gg-arrow-down"></i>
             </div>
 
-            <section id="about" class="body-font bg-secondary px-36 pt-36 text-white" style="font-family:'Dubai Regular'">
+            <section id="about" class="body-font bg-secondary pt-36 text-white lg:px-36"
+                style="font-family:'Dubai Regular'">
                 <div class="w-full px-5 py-24 lg:px-10">
                     <div class="items-left mb-20  flex flex-col flex-wrap text-left" data-aos="slide-right">
-                        <h1 class="title-font text-4xl font-bold text-white">Como funciona a</h1>
+                        <h1 class="title-font text-xl font-bold text-white lg:text-4xl">Como funciona a</h1>
                         <br />
-                        <h1 class="title-font text-[8rem] font-bold uppercase leading-none text-white"
+                        <h1 class="title-font text-[4rem] font-bold uppercase leading-none text-white lg:text-[8rem]"
                             style="font-family:'Dubai Bold'">Momentum</h1>
                     </div>
                     <div class="-m-4 flex flex-wrap text-center">
@@ -93,9 +94,9 @@
                         </div>
                         <div class="p-4 md:w-1/2 xl:w-1/4" data-aos="slide-up">
                             <div class="h-96 border-[3px] border-white px-12">
-                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.01
+                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.02
                                 </p>
-                                <h2 class="title-font mb-2 text-4xl font-bold uppercase text-white"
+                                <h2 class="title-font -ml-3 mb-2 text-4xl font-bold uppercase text-white"
                                     style="font-family:'Dubai Bold'">Planejamento</h2>
                                 <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
                                 <p class="text-base leading-relaxed">Contrução de uma estratégia customizada, diversificada
@@ -104,9 +105,9 @@
                         </div>
                         <div class="p-4 md:w-1/2 xl:w-1/4" data-aos="slide-up">
                             <div class="h-96 border-[3px] border-white px-12">
-                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.01
+                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.03
                                 </p>
-                                <h2 class="title-font mb-2 text-4xl font-bold uppercase text-white"
+                                <h2 class="title-font -ml-5 mb-2 text-4xl font-bold uppercase text-white"
                                     style="font-family:'Dubai Bold'">Implementação</h2>
                                 <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
                                 <p class="text-base leading-relaxed">Sekeção de produtos do mercado global da nossa
@@ -115,7 +116,7 @@
                         </div>
                         <div class="p-4 md:w-1/2 xl:w-1/4" data-aos="slide-up">
                             <div class="h-96 border-[3px] border-white px-12">
-                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.01
+                                <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.04
                                 </p>
                                 <h2 class="title-font mb-2 text-4xl font-bold uppercase text-white"
                                     style="font-family:'Dubai Bold'">Cenários Externos</h2>
@@ -129,6 +130,48 @@
             </section>
 
             <div class="vl-divider" />
+
+            <section id="about2" class=" body-font flex bg-secondary pt-36 text-white">
+                <div
+                    class="-ml-[30rem] -mt-96 flex w-1/2 -rotate-45 bg-[url('/src/assets/imgs/circulo.png')] bg-[length:800px_400px] bg-[center_right] bg-no-repeat lg:pl-36">
+                </div>
+                <!-- <div class="flex h-[30rem] bg-cover w-full bg-left-bottom bg-[url('/src/assets/imgs/circulo.png')] bg-no-repeat max-sm:bg-[length:400px_200px] lg:mt-32 lg:h-[30rem] lg:max-w-[80rem]"></div> -->
+                <div class="w-full px-5 py-24 lg:pr-60">
+                    <div class="items-left mb-20 flex flex-col flex-wrap text-left" data-aos="slide-right">
+                        <h1 class="title-font mb-12 text-xl font-bold text-white lg:text-[4rem]"
+                            style="font-family:'Dubai Bold'">
+                            Quem somos</h1>
+                        <span class="text-justify text-lg">
+                            <p>A Momentum Invest é uma gestora de recursos privados que atua no mercado local e
+                                internacional.</p>
+                            <p>Nossa missão é gerir os recursos dos clientes de forma ética e diligente, com foco em
+                                rentabilidade, controle de risco e preservação do capital.</p>
+                            <p>Com uma metodologia proprietária e diferenciada, nossos produtos vão muito além dos padrões
+                                do mercado. Desenvolvemos um processo único de avaliação de empresas com foco em Small Caps,
+                                nem por isso deixando de identificar e avaliar as melhores oportunidades do mercado,
+                                independente do tamanho das empresas. Temos mentalidade de donos e, quando investimos em um
+                                negócio, nos sentimos como sócios: defendendo os interesses de nossos investidores, buscando
+                                sempre as melhores práticas de governança.</p>
+                            <p>Desta forma, acreditamos que estamos aptos a gerar resultados consistentes e progressivos no
+                                longo prazo, como já atestado pelos retornos proporcionados pelos nossos fundos, muito acima
+                                dos índices de referência e muito acima do mercado. Isto porque utilizamos nossa pesquisa
+                                independente de fato, sem nos deixar influenciar pela opinião de terceiros ou consensuais.
+                                Essa é uma das razões dos nossos resultados diferenciados. Mas não paramos aí. Nosso
+                                processo de aprendizado é incessante, sempre com mentalidade e disposição para a aprender e
+                                entender. Acreditamos na educação financeira continuada e dessa forma compartilhamos nosso
+                                conhecimento com nossos investidores através de resenhas mensais e lives semanais, além das
+                                diversas mídias digitais. Dessa forma, nosso público e investidores estarão aptos a tomarem
+                                as decisões de investimentos que melhor atendam às próprias necessidades e aspirações
+                                embasadas em seu próprio conhecimento.</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="relative h-screen w-1/5">
+                    <div class="absolute inset-0 bg-[url('/src/assets/imgs/circles.png')] bg-right bg-no-repeat"></div>
+                </div>
+
+                <!-- <div class="flex w-1/5 bg-[url('/src/assets/imgs/circles.png')] bg-right bg-no-repeat"></div> -->
+            </section>
 
             <section id="values" class="body-font bg-secondary text-white">
                 <div class="mx-auto flex flex-col px-5 py-24 lg:px-10">
