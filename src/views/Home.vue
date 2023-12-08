@@ -131,7 +131,7 @@
 
             <div class="vl-divider" />
 
-            <section id="about2" class=" body-font flex bg-secondary pt-36 text-white">
+            <section id="about2" class="body-font flex bg-secondary pt-36 text-white" style="font-family:'Dubai Regular'">
                 <div
                     class="-ml-[30rem] -mt-96 flex w-1/2 -rotate-45 bg-[url('/src/assets/imgs/circulo.png')] bg-[length:800px_400px] bg-[center_right] bg-no-repeat lg:pl-36">
                 </div>
@@ -173,45 +173,19 @@
                 <!-- <div class="flex w-1/5 bg-[url('/src/assets/imgs/circles.png')] bg-right bg-no-repeat"></div> -->
             </section>
 
-            <section id="values" class="body-font bg-secondary text-white">
-                <div class="mx-auto flex flex-col px-5 py-24 lg:px-10">
-                    <div class="mx-auto">
-                        <div class="mb-20 text-left" data-aos="slide-right">
-                            <hr class="hr-title mb-5" style="width: 70px;" />
-                            <h1 class="title-font text-4xl font-bold text-white">Nossos valores</h1>
-                            <p class="mx-auto text-base font-bold leading-relaxed text-accent"> O QUE REGE NOSSO DIA A
-                                DIA</p>
-                        </div>
-                        <div class="mb-20 h-64 overflow-hidden" data-aos="flip-right">
-                            <img alt="content" class="h-full w-full object-cover object-center grayscale"
-                                src="../assets/imgs/valores.jpg">
-                        </div>
-                        <div class="-mx-4 -mb-10 -mt-4 flex flex-wrap space-y-6 sm:-m-4 md:space-y-0">
-                            <div class="flex flex-col items-center p-4 text-center md:w-1/3" data-aos="slide-up">
-                                <div class="grow">
-                                    <h2 class="title-font mb-3 text-lg font-bold text-white">Missão</h2>
-                                    <p class="text-base leading-relaxed">Nossa missão é transbordar financeiramente na
-                                        vida das pessoas, através da educação financeira apoiada por uma gestão
-                                        eficaz e adaptável.</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col items-center p-4 text-center md:w-1/3" data-aos="slide-up">
-                                <div class="grow">
-                                    <h2 class="title-font mb-3 text-lg font-bold text-white">Visão</h2>
-                                    <p class="text-base leading-relaxed">Nossa visão é ser reconhecidos pela geração de
-                                        riqueza dos que nos cercam, sejam clientes, familiares ou amigos, através da
-                                        educação financeira.</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col items-center p-4 text-center md:w-1/3" data-aos="slide-up">
-                                <div class="grow">
-                                    <h2 class="title-font mb-3 text-lg font-bold text-white">Valores</h2>
-                                    <p class="text-base leading-relaxed">Nossos valores estão firmados em honestidade,
-                                        transparência, parceria, segurança e resultados.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <section id="platform" class="body-font flex bg-secondary text-white" style="font-family:'Dubai Regular'">
+                <div class="w-2/3 bg-[src('/src/assets/imgs/plataforma.png')] bg-contain"></div>
+                <div class="w-1/3">
+                    <h1 class="text-4xl">NOSSA<br /><span class="text-6xl font-extrabold" style="font-family:'Dubai Bold'">PLATAFORMA</span></h1>
+                    <p class="text-lg">
+Bem-vindo à nossa plataforma, a sua parceira confiável para otimizar seus investimentos. Nossa plataforma de gerenciamento de investimento foi projetada para atender às suas necessidades financeiras, independentemente do seu nível de experiência.
+Com ferramentas avançadas, análises precisas e uma equipe de especialistas prontos para ajudar, você terá o controle total de seus investimentos. Ajudamos você a tomar decisões informadas e a maximizar seu potencial de crescimento financeiro.
+Descubra uma maneira mais inteligente de investir com [Nome da Plataforma]. Explore nossos recursos, comece a criar sua carteira e comece a trilhar o caminho para o sucesso financeiro. Seu futuro está a apenas alguns cliques de distância.
+Pronto para embarcar na jornada rumo ao sucesso financeiro?
+Junte-se a nós hoje e descubra como podemos ajudá-lo a alcançar seus objetivos de investimento.</p>
+                </div>
+                <div class="relative h-screen w-1/5">
+                    <!-- <div class="absolute inset-0 bg-[url('/src/assets/imgs/circles.png')] bg-right bg-no-repeat"></div> -->
                 </div>
             </section>
 
