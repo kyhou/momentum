@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <Page>
     <div class="mb-5 mt-10 flex flex-col items-center justify-center">
       <div>
@@ -20,7 +20,7 @@
               <img src="../assets/imgs/botao_select.png" alt="HVselect" class="w-60">
             </a>
         </div>
-        <!-- <div class="divider divider-vertical text-white opacity-100 m-0"></div> -->
+        <!-- <div class="divider divider-vertical text-white opacity-100 m-0"></div> 
         <div class="mt-3 lg:ml-10">
             <span class="sr-only">HVinvestimentos</span>
             <a href="https://invest.hvinvestimentos.com/login/login.php" class="normal-case">
@@ -43,4 +43,4 @@ export default {
     Page
   }
 };
-</script>
+</script> -->

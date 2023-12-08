@@ -31,7 +31,7 @@
             <a class="btn btn-ghost text-xl normal-case">
                 <span class="sr-only">HVselect</span>
                 <router-link to="/" class="btn btn-ghost text-xl normal-case">
-                    <img src="../assets/imgs/HVSelect-txt.png" alt="HVselect" class="h-12">
+                    <!-- <img src="../assets/imgs/HVSelect-txt.png" alt="HVselect" class="h-12"> -->
                 </router-link>
             </a>
         </div>
@@ -64,7 +64,7 @@
             <a class="block text-white" href="/">
                 <span class="sr-only">Home</span>
                 <router-link to="/" class="btn btn-ghost text-xl normal-case">
-                    <img src="../assets/imgs/HVSelect-txt.png" alt="HVselect" class="h-12">
+                    <!-- <img src="../assets/imgs/HVSelect-txt.png" alt="HVselect" class="h-12"> -->
                 </router-link>
             </a>
 

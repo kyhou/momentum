@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="hidden w-5/6 md:w-1/2 lg:mr-28 lg:block lg:max-w-sm">
-          <img class="fa-flip-horizontal rounded object-cover object-center" src="../assets/imgs/dubai.jpg">
+          <!-- <img class="fa-flip-horizontal rounded object-cover object-center" src="../assets/imgs/dubai.jpg"> -->
         </div>
       </div>
     </section>
