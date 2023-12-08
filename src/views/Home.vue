@@ -191,7 +191,7 @@ Junte-se a nós hoje e descubra como podemos ajudá-lo a alcançar seus objetivo
 
             <div class="vl-divider" />
 
-            <section id="properties" class="body-font bg-secondary">
+            <!-- <section id="properties" class="body-font bg-secondary">
                 <div class="px-5 py-24 lg:px-10">
                     <div data-aos="slide-right">
                         <div class="mb-20 text-left">
@@ -248,7 +248,6 @@ Junte-se a nós hoje e descubra como podemos ajudá-lo a alcançar seus objetivo
                         </div>
                     </div>
                     <div class="mb-10 mt-20 text-left" data-aos="slide-right">
-                        <!-- <hr class="hr-title mb-5" style="width: 70px;" /> -->
                         <h1 class="title-font text-2xl font-semibold text-white">Parceria Grupo HV e Daxo Incorporadora
                         </h1>
                     </div>
@@ -271,7 +270,7 @@ Junte-se a nós hoje e descubra como podemos ajudá-lo a alcançar seus objetivo
                 </div>
             </section>
 
-            <div class="vl-divider" />
+            <div class="vl-divider" /> 
 
             <section id="group" class="body-font bg-secondary">
                 <div class="px-5 py-24 lg:px-10">
@@ -305,7 +304,7 @@ Junte-se a nós hoje e descubra como podemos ajudá-lo a alcançar seus objetivo
                 </div>
             </section>
 
-            <div class="vl-divider" />
+            <div class="vl-divider" />-->
 
             <Contact></Contact>
         </Page>
