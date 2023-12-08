@@ -52,7 +52,7 @@
                             <img src="../assets/imgs/logotipo-invertida.svg" style="height: 2.5rem;" alt="Momentum">
                         </template>
                         <template v-else>
-                            <img src="../assets/imgs/hv_invest_texto_preto.svg" alt="HVinvest">
+                            <!-- <img src="../assets/imgs/hv_invest_texto_preto.svg" alt="HVinvest"> -->
                         </template>
                     </a>
                 </a>
