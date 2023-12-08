@@ -11,7 +11,6 @@ const Institutional = () => import("./views/Institutional.vue");
 const Policies = () => import("./views/Policies.vue");
 const ForgotPassword = () => import("./views/ForgotPassword.vue");
 const NewPassword = () => import("./views/NewPassword.vue");
-const PreLogin = () => import("./views/PreLoginPage.vue");
 const AporteDetails = () => import("./views/UserAporteDetails.vue");
 const WithdrawsDetails = () => import("./views/WithdrawsAdminPage.vue");
 
@@ -24,10 +23,6 @@ const routes = [
     {
         path: "/login",
         component: Login,
-    },
-    {
-        path: "/pre-login",
-        component: PreLogin,
     },
     {
         path: "/institutional",
@@ -96,14 +91,14 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    const publicPages = ['/login', '/', '/forgot-password', '/new-password', '/pre-login', '/policies', '/institutional'];
+    const publicPages = ['/login', '/', '/forgot-password', '/new-password', '/policies', '/institutional'];
     const authRequired = !publicPages.includes(to.path);
     const loggedIn = localStorage.getItem('user');
 
     // trying to access a restricted page + not logged in
     // redirect to login page
     if (authRequired && !loggedIn) {
-        next('/pre-login');
+        next('/login');
     } else {
         next();
     }

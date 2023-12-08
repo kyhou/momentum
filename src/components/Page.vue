@@ -174,7 +174,7 @@ export default {
             this.logIn();
         },
         logIn() {
-            this.$router.push('/pre-login');
+            this.$router.push('/login');
         },
         handleResize() {
             this.window.width = window.innerWidth;
