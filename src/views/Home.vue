@@ -74,7 +74,7 @@
             <section id="about" class="body-font bg-secondary pt-36 text-white lg:px-36"
                 style="font-family:'Dubai Regular'">
                 <div class="w-full px-5 py-24 lg:px-10">
-                    <div class="items-left mb-20  flex flex-col flex-wrap text-left" data-aos="slide-right">
+                    <div class="items-left mb-20 flex flex-col flex-wrap text-left" data-aos="slide-right">
                         <h1 class="title-font text-xl font-bold text-white lg:text-4xl">Como funciona a</h1>
                         <br />
                         <h1 class="title-font text-[4rem] font-bold uppercase leading-none text-white lg:text-[8rem]"
@@ -131,12 +131,12 @@
 
             <div class="vl-divider" />
 
-            <section id="about2" class="body-font flex bg-secondary pt-36 text-white" style="font-family:'Dubai Regular'">
+            <section id="about2" class="body-font flex bg-secondary text-white" style="font-family:'Dubai Regular'">
                 <div
-                    class="-ml-[30rem] -mt-96 flex w-1/2 -rotate-45 bg-[url('/src/assets/imgs/circulo.png')] bg-[length:800px_400px] bg-[center_right] bg-no-repeat lg:pl-36">
+                    class="-mt-96 ml-[-30rem] flex w-1/2 -rotate-45 bg-[url('/src/assets/imgs/circulo.png')] bg-[length:800px_400px] bg-[center_right] bg-no-repeat lg:pl-36">
                 </div>
                 <!-- <div class="flex h-[30rem] bg-cover w-full bg-left-bottom bg-[url('/src/assets/imgs/circulo.png')] bg-no-repeat max-sm:bg-[length:400px_200px] lg:mt-32 lg:h-[30rem] lg:max-w-[80rem]"></div> -->
-                <div class="w-full px-5 py-24 lg:pr-60">
+                <div class="w-full px-5 py-24 lg:mt-32 lg:pr-60">
                     <div class="items-left mb-20 flex flex-col flex-wrap text-left" data-aos="slide-right">
                         <h1 class="title-font mb-12 text-xl font-bold text-white lg:text-[4rem]"
                             style="font-family:'Dubai Bold'">
@@ -166,26 +166,47 @@
                         </span>
                     </div>
                 </div>
-                <div class="relative h-screen w-1/5">
+                <div class="relative -mt-52 h-screen w-1/5">
                     <div class="absolute inset-0 bg-[url('/src/assets/imgs/circles.png')] bg-right bg-no-repeat"></div>
                 </div>
 
                 <!-- <div class="flex w-1/5 bg-[url('/src/assets/imgs/circles.png')] bg-right bg-no-repeat"></div> -->
             </section>
 
-            <section id="platform" class="body-font flex bg-secondary text-white" style="font-family:'Dubai Regular'">
-                <div class="w-2/3 bg-[src('/src/assets/imgs/plataforma.png')] bg-contain"></div>
-                <div class="w-1/3">
-                    <h1 class="text-4xl">NOSSA<br /><span class="text-6xl font-extrabold" style="font-family:'Dubai Bold'">PLATAFORMA</span></h1>
-                    <p class="text-lg">
-Bem-vindo à nossa plataforma, a sua parceira confiável para otimizar seus investimentos. Nossa plataforma de gerenciamento de investimento foi projetada para atender às suas necessidades financeiras, independentemente do seu nível de experiência.
-Com ferramentas avançadas, análises precisas e uma equipe de especialistas prontos para ajudar, você terá o controle total de seus investimentos. Ajudamos você a tomar decisões informadas e a maximizar seu potencial de crescimento financeiro.
-Descubra uma maneira mais inteligente de investir com [Nome da Plataforma]. Explore nossos recursos, comece a criar sua carteira e comece a trilhar o caminho para o sucesso financeiro. Seu futuro está a apenas alguns cliques de distância.
-Pronto para embarcar na jornada rumo ao sucesso financeiro?
-Junte-se a nós hoje e descubra como podemos ajudá-lo a alcançar seus objetivos de investimento.</p>
-                </div>
-                <div class="relative h-screen w-1/5">
-                    <!-- <div class="absolute inset-0 bg-[url('/src/assets/imgs/circles.png')] bg-right bg-no-repeat"></div> -->
+            <section id="platform" class="body-font bg-secondary text-white" style="font-family:'Dubai Regular'">
+                <!-- <img class="ml-[50rem] -mt-[15rem] mb-[15rem]" src="/src/assets/imgs/yellow-circle.svg"> -->
+                <div class="flex">
+                    <img class="mb-40 w-3/4" src="/src/assets/imgs/plataforma.png">
+                    <div class="ml-20 w-1/4">
+                        <h1 class="mb-10 text-4xl">NOSSA<br /><span class="text-6xl font-extrabold"
+                                style="font-family:'Dubai Bold'">PLATAFORMA</span></h1>
+                        <p class="text-lg">
+                            Bem-vindo à nossa plataforma, a sua parceira confiável para otimizar seus investimentos. Nossa
+                            plataforma de gerenciamento de investimento foi projetada para atender às suas necessidades
+                            financeiras, independentemente do seu nível de experiência.</p>
+                        <br />
+                        <p class="text-lg">
+                            Com ferramentas avançadas, análises precisas e uma equipe de especialistas prontos para ajudar,
+                            você
+                            terá o controle total de seus investimentos. Ajudamos você a tomar decisões informadas e a
+                            maximizar
+                            seu potencial de crescimento financeiro.</p>
+                        <br />
+                        <p class="text-lg">
+                            Descubra uma maneira mais inteligente de investir com [Nome da Plataforma]. Explore nossos
+                            recursos,
+                            comece a criar sua carteira e comece a trilhar o caminho para o sucesso financeiro. Seu futuro
+                            está
+                            a apenas alguns cliques de distância.</p>
+                        <br />
+                        <p class="text-lg">
+                            Pronto para embarcar na jornada rumo ao sucesso financeiro?
+                            Junte-se a nós hoje e descubra como podemos ajudá-lo a alcançar seus objetivos de investimento.
+                        </p>
+                    </div>
+                    <div class="relative -mt-32 h-screen w-1/5">
+                        <div class="absolute inset-0 bg-[url('/src/assets/imgs/explore.svg')] bg-right bg-no-repeat"></div>
+                    </div>
                 </div>
             </section>
 

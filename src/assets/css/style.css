@@ -108,13 +108,6 @@ body .main {
     background-position: 75% 20%;
   }
 
-  .pre-login-bg-image {
-    background-image: url('/src/assets/Untitled.png');
-    position: relative;
-    background-repeat: no-repeat;
-    background-opacity: 30% !important;
-  }
-
   .w-100 {
     width: 25rem
       /* 400px */

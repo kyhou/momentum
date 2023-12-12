@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="5.8599033mm"
+   height="5.9038267mm"
+   viewBox="0 0 5.8599033 5.9038267"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-28.094758,-20.598743)">
+    <path
+       fill="#fabc05"
+       d="m 33.65819,24.907534 q 0.0185,0.336021 -0.0847,0.22225 -1.16417,1.505479 -2.81781,1.359958 -1.83092,-0.161395 -2.56646,-2.074333 l -0.0662,-0.267229 q -0.26987,-2.63525 2.0373,-3.418417 c 1.02393,-0.34925 2.23837,0.02646 2.98714,0.809625 q 1.29646,1.354667 0.51065,3.368146 z"
+       id="path22"
+       style="stroke-width:0.264583" />
+  </g>
+</svg>

@@ -1,5 +1,5 @@
 <template>
-    <section id="contact" class="body-font bg-neutral text-white">
+    <section id="contact" class="body-font bg-primary text-white">
         <div class="mx-auto flex flex-col justify-between px-10 py-24 text-center font-bold lg:flex-row" data-aos="zoom-in">
             <div class="mb-5 flex flex-row justify-center">
                 <a href="https://www.instagram.com/grupohvselect/" target="_blank" class="btn btn-circle mr-2">
@@ -16,7 +16,7 @@
             <div>
                 <a
                     href="https://api.whatsapp.com/send/?phone=%2B554792307554&amp;text=Ol%C3%A1,+visitei+o+site+e+gostaria+de+maiores+informa%C3%A7%C3%B5es.&amp;app_absent=0">
-                    <button class="btn btn-outline btn-accent text-black">Entre em contato</button>
+                    <button class="btn text-black">Entre em contato</button>
                 </a>
             </div>
         </div>
@@ -31,7 +31,7 @@
                 <p class="leading-relaxed">(47) 9 9230-7554</p>
             </div>
         </div>
-        <div class="body-font relative bg-base-200 text-white">
+        <div class="body-font relative bg-secondary text-white">
             <div v-if="window.width > 1024" class="container flex grow justify-evenly px-5 py-24 sm:flex-nowrap">
                 <div class="flex items-end justify-end overflow-hidden p-10 sm:mr-10 lg:bg-neutral">
                     <div class="relative flex flex-wrap bg-black py-6 shadow-md">
