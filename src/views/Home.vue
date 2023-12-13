@@ -173,11 +173,11 @@
                 <!-- <div class="flex w-1/5 bg-[url('/src/assets/imgs/circles.png')] bg-right bg-no-repeat"></div> -->
             </section>
 
-            <section id="platform" class="body-font bg-secondary text-white" style="font-family:'Dubai Regular'">
+            <section id="platform" class="body-font bg-secondary pb-20 text-white" style="font-family:'Dubai Regular'">
                 <!-- <img class="ml-[50rem] -mt-[15rem] mb-[15rem]" src="/src/assets/imgs/yellow-circle.svg"> -->
                 <div class="flex">
-                    <img class="mb-40 w-3/4" src="/src/assets/imgs/plataforma.png">
-                    <div class="ml-20 w-1/4">
+                    <img class="mt-20 w-3/4" src="/src/assets/imgs/plataforma.png">
+                    <div class="ml-20 mt-20 w-1/4">
                         <h1 class="mb-10 text-4xl">NOSSA<br /><span class="text-6xl font-extrabold"
                                 style="font-family:'Dubai Bold'">PLATAFORMA</span></h1>
                         <p class="text-lg">
