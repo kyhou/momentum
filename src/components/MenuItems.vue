@@ -1,7 +1,7 @@
 <template>
     <template v-if="showUserContent">
         <div class="divider m-0 opacity-100 sm:divider-horizontal"></div>
-        <li class="menu-title lg:hidden">
+        <li class="menu-title text-neutral lg:hidden">
             <span>Usuário</span>
         </li>
         <li>
@@ -10,13 +10,13 @@
     </template>
     <template v-if="showColaboratorContent">
         <div class="divider m-0 text-menu-text opacity-100 sm:divider-horizontal"></div>
-        <li class="menu-title lg:hidden">
+        <li class="menu-title text-neutral lg:hidden">
             <span>Colaborador</span>
         </li>
     </template>
     <template v-if="showAdminContent">
         <div class="divider m-0 text-menu-text opacity-100 sm:divider-horizontal"></div>
-        <li class="menu-title lg:hidden">
+        <li class="menu-title text-neutral lg:hidden">
             <span>Admin</span>
         </li>
         <li class="lg:hidden">
