@@ -44,16 +44,7 @@
                 <a class="w-45">
                     <span class="sr-only">Momentum Invest</span>
                     <a href="/" class="btn btn-ghost normal-case">
-                        <template v-if="this.user == null ||
-                            this.user.type == 'select' ||
-                            this.$route.name == 'home' ||
-                            this.$route.fullPath == '/policies' ||
-                            this.$route.fullPath == '/institutional'">
-                            <img src="../assets/imgs/logotipo-invertida.svg" style="height: 2.5rem;" alt="Momentum">
-                        </template>
-                        <template v-else>
-                            <!-- <img src="../assets/imgs/hv_invest_texto_preto.svg" alt="HVinvest"> -->
-                        </template>
+                        <img src="../assets/imgs/logotipo-invertida.svg" style="height: 2.5rem;" alt="Momentum Invest">
                     </a>
                 </a>
             </div>
