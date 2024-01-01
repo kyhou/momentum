@@ -3,7 +3,7 @@
         <div class="mx-4 mb-14 mt-10">
             <p class="text-3xl">Olá {{ userName }}</p>
             <br />
-            <router-link to="/dashboard/" class="btn btn-outline btn-accent mb-5">Voltar</router-link>
+            <a @click="$router.back()" class="btn btn-outline btn-accent mb-5">Voltar</a>
             <div class="overflow-x-auto">
                 <table class="table table-zebra w-full">
                     <thead>
@@ -40,6 +40,7 @@ import UsersDetailsService from "../services/users_details.service";
 import Page from '../components/Page.vue'
 import { date_helpers } from '../helpers/date_helpers';
 import EventBus from "../common/EventBus";
+import { useRoute } from 'vue-router'
 
 export default {
     name: "UserStatement",
@@ -53,7 +54,8 @@ export default {
             window: {
                 width: 0,
                 height: 0
-            }
+            },
+            route: useRoute(),
         }
     },
     created() {
@@ -63,9 +65,17 @@ export default {
     },
     mounted() {
         const user = JSON.parse(localStorage.getItem('user'));
-        UsersDetailsService.getUserName(user.id).then(
+        var userId = null;
+
+        if (this.route.params.userId != null) {
+            userId = this.route.params.userId;
+        } else {
+            userId = user.id;
+        }
+        
+        UsersDetailsService.getUserName(userId).then(
             response => {
-                this.userName = `${response.data.firstName ? response.data.firstName : "Usuário"} ${response.data.lastName ? response.data.lastName : ''}`;
+                this.userName = `${response.data.firstName ?? "Usuário"} ${response.data.lastName ?? ''}`;
             },
             error => {
                 if (error.response && error.response.status === 403) {
@@ -74,7 +84,7 @@ export default {
             }
         );
 
-        UserStatementService.getTransactions(user.id).then(
+        UserStatementService.getTransactions(userId).then(
             response => {
                 this.transactions = response.data;
             },
