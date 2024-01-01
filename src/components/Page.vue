@@ -1,7 +1,7 @@
 <template>
     <header aria-label="Site Header" class="header sticky top-0 z-50 bg-header lg:px-24">
         <div class="navbar bg-navbar">
-            <div class="navbar-start mt-5 w-full">
+            <div class="navbar-start my-2 w-full">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
