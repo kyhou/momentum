@@ -3,7 +3,7 @@
         <button class="btn mb-5" @click="exportGrid">Exportar</button>
         <v-grid id="revo-grid" :exporting="true" :filter="true" :auto-size-column="{
             mode: 'headerClickAutoSize'
-        }" :resize="true" theme="darkMaterial" :source="rows" :columns="columns" />
+        }" :resize="true" theme="material" :source="rows" :columns="columns" />
     </Page>
 </template>
 

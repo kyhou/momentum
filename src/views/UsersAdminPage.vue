@@ -130,9 +130,9 @@
             </div>
         </div>
 
-        <v-grid id="revo-grid" :exporting="true" :filter="true" :auto-size-column="{
-            mode: 'headerClickAutoSize'
-        }" :resize="true" theme="darkMaterial" :source="rows" :columns="columns" />
+            <v-grid id="revo-grid" :exporting="true" :filter="true" :auto-size-column="{
+                mode: 'headerClickAutoSize'
+            }" :resize="true" theme="material" :source="rows" :columns="columns" />
     </Page>
 </template>
 
