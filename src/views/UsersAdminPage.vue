@@ -268,7 +268,7 @@ export default {
                                     'btn': true,
                                     'btn-sm': true
                                 },
-                            }, "Abir")
+                            }, "Abrir")
                         );
                     },
                     readonly: true
