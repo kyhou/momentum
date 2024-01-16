@@ -21,7 +21,7 @@
         </div>
     </section>
 
-    <section id="map" style="font-family:'Dubai Regular'">
+    <!-- <section id="map" style="font-family:'Dubai Regular'">
         <div v-if="window.width <= 1024" class="relative flex flex-wrap bg-secondary py-6 shadow-md">
             <div class="mt-4 px-6 lg:mt-0 lg:w-1/2">
                 <h2 class="title-font text-xs font-bold tracking-widest text-white md:text-lg">Email</h2>
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </template>
 
 <script>

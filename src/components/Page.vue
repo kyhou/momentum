@@ -15,28 +15,28 @@
                         <nav v-if="(this.$route.name == 'home') || (this.$route.fullPath == '/policies') || (this.$route.fullPath == '/institutional')"
                             aria-label="Site Nav" class="block">
                             <li>
-                                <a class="link link-hover text-white transition" href="#about">
-                                    Sobre nós
+                                <a class="link link-hover uppercase text-white transition" href="#about">
+                                    Quem somos
                                 </a>
                             </li>
                             <li>
-                                <a class="link link-hover text-white transition" href="#properties">
-                                    Imóveis
+                                <a class="link link-hover uppercase text-white transition" href="#platform">
+                                    Plataforma
                                 </a>
                             </li>
                             <li>
-                                <a class="link link-hover text-white transition" href="#contact">
+                                <a class="link link-hover uppercase text-white transition" href="#contact">
                                     Contato
                                 </a>
                             </li>
-                            <div class="divider m-0"></div>
+                            <!-- <div class="divider m-0"></div>
                             <li class="menu-title text-neutral">
                                 <span>Corporativo</span>
                             </li>
                             <li><router-link to="/policies" class="link link-hover text-white">Políticas</router-link>
                             </li>
                             <li><router-link to="/institutional"
-                                    class="link link-hover text-white">Institucional</router-link></li>
+                                    class="link link-hover text-white">Institucional</router-link></li> -->
                         </nav>
                         <MenuItems />
                     </ul>
@@ -56,21 +56,21 @@
                         <template
                             v-if="!((this.$route.fullPath == '/policies') || (this.$route.fullPath == '/institutional'))">
                             <li>
-                                <a class="link link-hover text-white transition" href="#about">
-                                    Sobre nós
+                                <a class="link link-hover uppercase text-white transition" href="#about">
+                                    Quem somos
                                 </a>
                             </li>
                             <li>
-                                <a class="link link-hover text-white transition" href="#properties">
-                                    Imóveis
+                                <a class="link link-hover uppercase text-white transition" href="#platform">
+                                    Plataforma
                                 </a>
                             </li>
                             <li>
-                                <a class="link link-hover text-white transition" href="#contact">
+                                <a class="link link-hover uppercase text-white transition" href="#contact">
                                     Contato
                                 </a>
                             </li>
-                            <div class="dropdown dropdown-bottom">
+                            <!-- <div class="dropdown dropdown-bottom">
                                 <a tabindex="0" class="link link-hover text-white">Corporativo</a>
                                 <ul tabindex="0" class="dropdown-content menu rounded-box w-52 bg-primary p-2 shadow">
                                     <li><router-link to="/policies"
@@ -78,7 +78,7 @@
                                     <li><router-link to="/institutional"
                                             class="link link-hover text-white">Institucional</router-link></li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </template>
                         <template v-else>
                             <li><router-link to="/policies"
