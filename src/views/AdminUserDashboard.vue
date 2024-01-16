@@ -55,49 +55,8 @@
                             </div>
                         </div>
                         <div class="w-full px-4 lg:w-6/12 xl:w-3/12">
-                            <router-link :to="'/admin/userStatement/' + this.route.params.userId" class="btn-neutral btn font-bold">Extrato</router-link>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="modal-withdrawal" class="modal-toggle" />
-                        <div class="modal">
-                            <div class="modal-box bg-secondary">
-                                <label for="modal-withdrawal" class="btn btn-circle btn-sm absolute right-2 top-2">✕</label>
-                                <h2 class="text-lg font-semibold capitalize text-white">Saque</h2>
-                                <Form id="addForm" @submit="handleWithdrawal" :validation-schema="schema">
-                                    <div v-if="!successful">
-                                        <div class="form-group mt-4 gap-6">
-                                            <CurrencyInput name="value" :options="currencyOptions"
-                                                message="Informe o valor para resgate:" />
-                                        </div>
-                                        <div class="form-group mt-5">
-                                            <button type="submit" class="btn btn-warning btn-block text-black"
-                                                :disabled="loading">
-                                                <div v-show="loading">
-                                                    <svg aria-hidden="true"
-                                                        class="mr-2 h-8 w-8 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
-                                                        viewBox="0 0 100 101" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                                                            fill="currentColor" />
-                                                        <path
-                                                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                                                            fill="currentFill" />
-                                                    </svg>
-                                                    <span class="sr-only">Loading...</span>
-                                                </div>
-                                                Solicitar Saque
-                                            </button>
-                                        </div>
-                                    </div>
-                                </Form>
-
-                                <div v-if="message" class="alert mt-5"
-                                    :class="successful ? 'alert-success' : 'alert-error'">
-                                    {{ message }}
-                                </div>
-                            </div>
+                            <router-link :to="'/admin/userStatement/' + this.route.params.userId"
+                                class="btn-neutral btn font-bold">Extrato</router-link>
                         </div>
                     </div>
                 </div>
@@ -120,9 +79,7 @@ import UserDashboardService from "../services/user_dashboard.service";
 import UsersDetailsService from "../services/users_details.service";
 import ProfitsService from "../services/profits.service";
 import Page from '../components/Page.vue'
-import { Form } from "vee-validate";
 import * as yup from "yup";
-import CurrencyInput from '../components/CurrencyInput.vue';
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { date_helpers } from '../helpers/date_helpers';
 import MessageModal from '../components/MessageModal.vue';
@@ -134,9 +91,7 @@ export default {
     name: "admin-user-dashboard",
     components: {
         // eslint-disable-next-line vue/no-reserved-component-names
-        Form,
         Page,
-        CurrencyInput,
         FontAwesomeIcon,
         MessageModal,
         LineChart,
@@ -336,12 +291,14 @@ export default {
                     }
 
                     this.totalBalance += +element.availableProfit + +element.value;
-                    
+
                     if (element.monthProfits && element.monthProfits.length > 0) {
                         lastMonthProfitGlobal += +element.monthProfits[element.monthProfits.length - 1].profit;
                     }
                 });
-                this.percentageBalanceLastMonth = `${(((this.totalBalance / lastMonthProfitGlobal) - 1) * 100).toFixed(2)}%`;
+                
+                var lastMonthBalance = ((this.totalBalance / lastMonthProfitGlobal) - 1) * 100;
+                this.percentageBalanceLastMonth = `${(Number.isFinite(lastMonthBalance) ? lastMonthBalance : 0).toFixed(2)}%`;
 
                 this.$refs.lineChart.updateChart(this.lineChartData, this.lineChartOptions);
             },
@@ -364,64 +321,25 @@ export default {
 
         var performancePseudoValue = 100;
 
-        ProfitsService.getProfits().then(
-            response => {
-                if (response.data) {
-                    response.data.forEach((profit) => {
-                        performancePseudoValue *= (profit.value / 100) + 1;
-                    });
+        try {
+            const globalProfits = await ProfitsService.getUserProfits(this.route.params.userId);
 
-                    this.percentagePerformanceLastMonth = `${response.data[response.data.length - 1].value}%`;
+            if (globalProfits.data) {
+                globalProfits.data.forEach((profit) => {
+                    performancePseudoValue *= (profit.value / 100) + 1;
+                });
 
-                    this.percentagePerformanceTotal = `${(((performancePseudoValue / 100) - 1) * 100).toFixed(2)}%`;
-                }
-            },
-            error => {
-                if (error.response && error.response.status === 403) {                    
-                    this.router.push("/dashboard");
-                }
-            });
+                this.percentagePerformanceLastMonth = `${globalProfits.data[globalProfits.data.length - 1].value}%`;
+
+                this.percentagePerformanceTotal = `${(((performancePseudoValue / 100) - 1) * 100).toFixed(2)}%`;
+            }
+        } catch (error) {
+            if (error.response && error.response.status === 403) {
+                this.router.push("/dashboard");
+            }
+        }
     },
     methods: {
-        handleWithdrawal(value) {
-            this.loading = true;
-
-            if (this.usesTransactionDaysLimit && new Date().getDate() > this.transactionDaysLimit) {
-                this.successful = false;
-                this.loading = false;
-                this.message = "Solicitação de saque disponível somente no periodo do dia 1 ao dia 5.";
-                return;
-            }
-
-            if (value.value <= 0) {
-                this.successful = false;
-                this.loading = false;
-                this.message = "Valor solicitado deve ser maior que 0(zero).";
-                return;
-            }
-
-            if (value.value > this.totalBalance) {
-                this.successful = false;
-                this.loading = false;
-                this.message = "Valor solicitado maior que o disponível, favor verificar.";
-                return;
-            }
-
-            UserDashboardService.newTransaction(this.route.params.userId, value).then(() => {
-                this.successful = true;
-                this.loading = false;
-                this.message = "Solicitação de saque enviada com sucesso!";
-            }).catch(err => {
-                this.successful = false;
-                this.loading = false;
-                this.message = err.response.data.message;
-            })
-
-            setTimeout(function () {
-                this.successful = false;
-                this.message = "";
-            }, 5000);
-        },
         resetModal() {
             this.loading = false;
             this.successful = false;

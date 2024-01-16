@@ -306,7 +306,6 @@ export default {
             message: "",
             loading: false,
             userName: "",
-            aportes: [],
             totalBalance: 0,
             currencyOptions: {
                 "locale": "pt-BR",
@@ -353,8 +352,6 @@ export default {
 
         UserDashboardService.getUserAportes(this.user.id).then(
             response => {
-                this.aportes = response.data;
-
                 expertDataset.data = [];
                 securityDataset.data = [];
 
@@ -380,12 +377,14 @@ export default {
                     }
 
                     this.totalBalance += +element.availableProfit + +element.value;
-                    
+
                     if (element.monthProfits && element.monthProfits.length > 0) {
                         lastMonthProfitGlobal += +element.monthProfits[element.monthProfits.length - 1].profit;
                     }
                 });
-                this.percentageBalanceLastMonth = `${(((this.totalBalance / lastMonthProfitGlobal) - 1) * 100).toFixed(2)}%`;
+
+                var lastMonthBalance = ((this.totalBalance / lastMonthProfitGlobal) - 1) * 100;
+                this.percentageBalanceLastMonth = `${(Number.isFinite(lastMonthBalance) ? lastMonthBalance : 0).toFixed(2)}%`;
 
                 this.$refs.lineChart.updateChart(this.lineChartData, this.lineChartOptions);
             },
@@ -408,28 +407,26 @@ export default {
 
         var performancePseudoValue = 100;
 
-        ProfitsService.getProfits().then(
-            response => {
-                if (response.data) {
-                    response.data.forEach((profit) => {
-                        performancePseudoValue *= (profit.value / 100) + 1;
-                    });
+        try {
+            const globalProfits = await ProfitsService.getUserProfits(this.user.id);
 
-                    this.percentagePerformanceLastMonth = `${response.data[response.data.length - 1].value}%`;
+            if (globalProfits.data) {
+                globalProfits.data.forEach((profit) => {
+                    performancePseudoValue *= (profit.value / 100) + 1;
+                });
 
-                    this.percentagePerformanceTotal = `${(((performancePseudoValue / 100) - 1) * 100).toFixed(2)}%`;
-                }
-            },
-            error => {
-                if (error.response && error.response.status === 403) {
-                    EventBus.dispatch("logout");
-                }
-            });
-    },
-    updated() {
+                this.percentagePerformanceLastMonth = `${globalProfits.data[globalProfits.data.length - 1].value}%`;
+
+                this.percentagePerformanceTotal = `${(((performancePseudoValue / 100) - 1) * 100).toFixed(2)}%`;
+            }
+        } catch (error) {
+            if (error.response && error.response.status === 403) {
+                EventBus.dispatch("logout");
+            }
+        }
     },
     methods: {
-        handleWithdrawal(value) {
+        async handleWithdrawal(value) {
             this.loading = true;
 
             if (this.usesTransactionDaysLimit && new Date().getDate() > this.transactionDaysLimit) {
@@ -453,17 +450,18 @@ export default {
                 return;
             }
 
-            UserDashboardService.newTransaction(this.user.id, value).then(() => {
+            try {
+                await UserDashboardService.newTransaction(this.user.id, value);
                 this.successful = true;
                 this.loading = false;
                 this.message = "Solicitação de saque enviada com sucesso!";
-            }).catch(err => {
+            } catch (err) {
                 this.successful = false;
                 this.loading = false;
                 this.message = err.response.data.message;
-            })
+            }
 
-            setTimeout(function () {
+            setTimeout(() => {
                 this.successful = false;
                 this.message = "";
             }, 5000);

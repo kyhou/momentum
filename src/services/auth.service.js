@@ -4,20 +4,24 @@ import TokenService from "./token.service";
 const API_URL = '/auth/';
 
 class AuthService {
-  login(user) {
-    return html
-      .post(API_URL + 'signin', {
-        email: user.email,
-        password: user.password
-      })
-      .then(response => {
-        if (response.data.accessToken) {
-          TokenService.setUser(response.data);
-        }
+/**
+ * Logs in a user.
+ *
+ * @param {object} user - The user object containing email and password.
+ * @return {Promise<object>} A promise that resolves to the response data.
+ */
+async login(user) {
+  const response = await html.post(API_URL + 'signin', {
+    email: user.email,
+    password: user.password
+  });
 
-        return response.data;
-      });
+  if (response.data.accessToken) {
+    TokenService.setUser(response.data);
   }
+
+  return response.data;
+}
 
   logout() {
     TokenService.removeUser();
