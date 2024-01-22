@@ -142,7 +142,8 @@ export default {
             editMode: yup.boolean(),
             user: yup.string().required("Favor selecionar um usuário"),
             value: yup.number().required("Favor informar o valor do aporte"),
-            date: yup.date().required("Favor selecionar uma data")
+            date: yup.date().required("Favor selecionar uma data"),
+            type: yup.string().required("Favor selecionar um tipo"),
         });
 
         return {
