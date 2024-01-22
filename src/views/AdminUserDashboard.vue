@@ -278,14 +278,31 @@ export default {
 
                     if (element.monthProfits) {
                         element.monthProfits.forEach((monthProfit) => {
-                            this.lineChartData.labels.push(monthProfit.month);
+                            var monthPosition = null;
+                            var existingMonth = this.lineChartData.labels.find((x) => x.toLowerCase() == monthProfit.month.toLowerCase());
 
-                            if (element.type.toLowerCase() == "expert") {
-                                expertDataset.data.push(monthProfit.profit);
-                            }
+                            if (!existingMonth) {
+                                this.lineChartData.labels.push(monthProfit.month);
 
-                            if (element.type.toLowerCase() == "security") {
-                                securityDataset.data.push(monthProfit.profit);
+                                if (element.type.toLowerCase() == "expert") {
+                                    expertDataset.data.push(monthProfit.profit);
+                                    securityDataset.data.push(0);
+                                }
+
+                                if (element.type.toLowerCase() == "security") {
+                                    expertDataset.data.push(0);
+                                    securityDataset.data.push(monthProfit.profit);
+                                }
+                            } else {
+                                monthPosition = this.lineChartData.labels.indexOf(existingMonth);
+
+                                if (element.type.toLowerCase() == "expert") {
+                                    expertDataset.data[monthPosition] += monthProfit.profit;
+                                }
+
+                                if (element.type.toLowerCase() == "security") {
+                                    securityDataset.data[monthPosition] += monthProfit.profit;
+                                }
                             }
                         })
                     }
@@ -296,7 +313,7 @@ export default {
                         lastMonthProfitGlobal += +element.monthProfits[element.monthProfits.length - 1].profit;
                     }
                 });
-                
+
                 var lastMonthBalance = ((this.totalBalance / lastMonthProfitGlobal) - 1) * 100;
                 this.percentageBalanceLastMonth = `${(Number.isFinite(lastMonthBalance) ? lastMonthBalance : 0).toFixed(2)}%`;
 
