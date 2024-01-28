@@ -4,7 +4,7 @@
             <section id="hero" class="body-font bg-secondary" style="font-family:'Dubai Regular'">
                 <div class="hero">
                     <div class="hero-content flex w-full flex-wrap gap-0 pb-0">
-                        <div class="basis-[95%] lg:basis-5/12" data-aos=""> <!-- slide-right -->
+                        <div class="basis-[95%] md:basis-5/12" data-aos=""> <!-- slide-right -->
                             <h1 class="px-3 pt-6 text-3xl font-extrabold uppercase text-white max-sm:mb-1 lg:text-4xl lg:leading-[55px]"
                                 style="font-family:'Dubai Bold'">Eleve seu portfólio
                                 com ativos que rendem</h1>
@@ -16,8 +16,8 @@
                                 às necessidades de
                                 cada cliente, buscando as melhores oportunidades de investimento local e
                                 internacional.</span>
-                            <div class="div mt-10 flex flex-wrap">
-                                <a href="#about" class="btn border-0 bg-[#fabd05] font-bold text-white lg:ml-60">Comece
+                            <div class="div mt-10 flex flex-wrap md:max-lg:mb-16">
+                                <a href="#about" class="btn border-0 bg-[#fabd05] font-bold text-white lg:ml-36 xl:ml-60">Comece
                                     agora</a>
                                 <a href="#about" class="btn btn-ghost ml-5 border-0 font-bold text-white">Saiba Mais</a>
                             </div>
@@ -30,8 +30,8 @@
             </section>
 
             <section class="bg-[#181818] tracking-widest" style="font-family:'Dubai Regular'">
-                <div class="lg:flex lg:flex-wrap">
-                    <div class="p-4 lg:w-1/3" data-aos=""> <!-- zoom-in -->
+                <div class="md:flex md:flex-wrap">
+                    <div class="p-4 md:w-1/3" data-aos=""> <!-- zoom-in -->
                         <div class="flex flex-wrap items-center justify-center p-8">
                             <!-- <FontAwesomeIcon icon="fa-handshake" class="h-20 text-warning" /> -->
                             <img class="h-20" src="/src/assets/imgs/porquin.svg" />
@@ -39,14 +39,14 @@
                                     class="font-bold">Fixa</span></h2>
                         </div>
                     </div>
-                    <div class="p-4 lg:w-1/3" data-aos=""> <!-- zoom-in -->
+                    <div class="p-4 md:w-1/3" data-aos=""> <!-- zoom-in -->
                         <div class="flex flex-wrap items-center justify-center p-8">
                             <img class="h-20" src="/src/assets/imgs/graf.svg" />
                             <h2 class="title-font ml-3 text-lg uppercase text-white">Renda<br /><span
                                     class="font-bold">Variável</span></h2>
                         </div>
                     </div>
-                    <div class="p-4 lg:w-1/3" data-aos=""> <!-- zoom-in -->
+                    <div class="p-4 md:w-1/3" data-aos=""> <!-- zoom-in -->
                         <div class="flex flex-wrap items-center justify-center p-8">
                             <img class="h-20" src="/src/assets/imgs/lamp.svg" />
                             <h2 class="title-font ml-3 text-lg uppercase text-white">Outras<br /><span
@@ -57,11 +57,11 @@
             </section>
 
             <section class="flex justify-center bg-secondary">
-                <div class="flex h-[30rem] w-full justify-center bg-[url('/src/assets/imgs/circulo.png')] bg-center bg-no-repeat max-sm:bg-[length:400px_200px] lg:mt-32 lg:h-[30rem] lg:max-w-[80rem]"
+                <div class="flex h-[30rem] w-full justify-center bg-[url('/src/assets/imgs/circulo.png')] bg-center bg-no-repeat max-md:bg-[length:500px_250px] max-sm:bg-[length:400px_200px] max-xs:bg-[length:300px_150px] lg:mt-32 lg:max-w-[80rem]"
                     data-aos=""> <!-- zoom-in -->
                     <div
-                        class="mt-44 w-full text-center text-[3rem] uppercase leading-none text-white lg:mt-28 lg:text-[6rem]">
-                        Este é o seu<br /><span class="text-[4rem] font-bold lg:text-[9rem]"
+                        class="mt-44 w-full text-center text-[2rem] uppercase leading-none text-white sm:text-[4rem] md:text-[5rem] lg:mt-28 lg:text-[6rem]">
+                        Este é o seu<br /><span class="text-[3.5rem] font-bold xs:text-[4rem] sm:text-[7rem] md:text-[8rem] lg:text-[9rem]"
                             style="font-family:'Dubai Bold'">momento</span></div>
                 </div>
             </section>
@@ -79,49 +79,58 @@
                             style="font-family:'Dubai Bold'">Momentum</h1>
                     </div>
                     <div class="-m-4 flex flex-wrap text-center">
-                        <div class="p-4 md:w-1/2 xl:w-1/4" data-aos=""> <!-- slide-up -->
+                        <div class="w-full p-4 sm:w-1/2 2xl:w-1/4" data-aos=""> <!-- slide-up -->
                             <div class="h-96 border-[3px] border-white px-12">
                                 <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.01
                                 </p>
-                                <h2 class="title-font mb-2 text-4xl font-bold uppercase text-white"
-                                    style="font-family:'Dubai Bold'">Entender o Cliente</h2>
-                                <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
-                                <p class="text-lg leading-relaxed">Analisamos as necessidades, objetivos, perfil do
-                                    investidor e o seu momento de vida.</p>
+                                <div class="max-md:-mx-12">
+                                    <h2 class="title-font mb-2 text-2xl font-bold uppercase text-white"
+                                        style="font-family:'Dubai Bold'">Entender o Cliente</h2>
+                                    <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
+                                    <p class="text-lg leading-relaxed">Analisamos as necessidades, objetivos, perfil do
+                                        investidor e o seu momento de vida.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-4 md:w-1/2 xl:w-1/4" data-aos=""> <!-- slide-up -->
+                        <div class="w-full p-4 sm:w-1/2 2xl:w-1/4" data-aos=""> <!-- slide-up -->
                             <div class="h-96 border-[3px] border-white px-12">
                                 <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.02
                                 </p>
-                                <h2 class="title-font -ml-3 mb-2 text-4xl font-bold uppercase text-white"
-                                    style="font-family:'Dubai Bold'">Planejamento</h2>
-                                <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
-                                <p class="text-lg leading-relaxed">Nossos especialista criam uma estratégia personalizada e
-                                    diversificada, considerando as melhores opções, de acordo com o perfil do investidor.
-                                </p>
+                                <div class="max-md:-mx-12">
+                                    <h2 class="title-font mb-2 text-2xl font-bold uppercase text-white"
+                                        style="font-family:'Dubai Bold'">Planejamento</h2>
+                                    <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
+                                    <p class="text-lg leading-relaxed">Nossos especialista criam uma estratégia
+                                        personalizada e diversificada, considerando as melhores opções, de acordo com o
+                                        perfil do investidor.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-4 md:w-1/2 xl:w-1/4" data-aos=""> <!-- slide-up -->
+                        <div class="w-full p-4 sm:w-1/2 2xl:w-1/4" data-aos=""> <!-- slide-up -->
                             <div class="h-96 border-[3px] border-white px-12">
                                 <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.03
                                 </p>
-                                <h2 class="title-font -ml-5 mb-2 text-4xl font-bold uppercase text-white"
-                                    style="font-family:'Dubai Bold'">Implementação</h2>
-                                <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
-                                <p class="text-lg leading-relaxed">Seleção de produtos do mercado local e global, através da
-                                    nossa equipe de especialistas.</p>
+                                <div class="max-md:-mx-12">
+                                    <h2 class="title-font mb-2 text-2xl font-bold uppercase text-white"
+                                        style="font-family:'Dubai Bold'">Implementação</h2>
+                                    <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
+                                    <p class="text-lg leading-relaxed">Seleção de produtos do mercado local e global,
+                                        através da nossa equipe de especialistas.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-4 md:w-1/2 xl:w-1/4" data-aos=""> <!-- slide-up -->
+                        <div class="w-full p-4 sm:w-1/2 2xl:w-1/4" data-aos=""> <!-- slide-up -->
                             <div class="h-96 border-[3px] border-white px-12">
                                 <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.04
                                 </p>
-                                <h2 class="title-font mb-2 text-4xl font-bold uppercase text-white"
-                                    style="font-family:'Dubai Bold'">Cenários Externos</h2>
-                                <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
-                                <p class="text-lg leading-relaxed">Monitoramento dos resultados e adaptação das estratégias,
-                                    caso necessário.</p>
+                                <div class="max-[1800px]:-mx-12">
+                                    <h2 class="title-font -ml-5 mb-2 text-2xl font-bold uppercase text-white"
+                                        style="font-family:'Dubai Bold'">Acompanhamento</h2>
+                                    <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
+                                    <p class="text-lg leading-relaxed">Monitoramento dos resultados e adaptação das
+                                        estratégias, caso necessário.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -182,10 +191,9 @@
             </section>
 
             <section id="platform" class="body-font bg-secondary text-white lg:pb-20" style="font-family:'Dubai Regular'">
-                <!-- <img class="ml-[50rem] -mt-[15rem] mb-[15rem]" src="/src/assets/imgs/yellow-circle.svg"> -->
                 <img v-if="window.width <= 1024" class="pt-20 lg:w-3/4" src="/src/assets/imgs/plataforma2.png">
                 <div class="flex">
-                    <img v-if="window.width >= 1024" class="mt-20 w-3/4" src="/src/assets/imgs/plataforma.png">
+                    <img v-if="window.width >= 1024" class="mt-20 w-3/4 object-contain" src="/src/assets/imgs/plataforma.png">
                     <div class="ml-5 flex w-2/3 flex-col justify-center lg:ml-20 lg:mt-20 lg:w-1/4">
                         <h1 class="mb-10 text-4xl">NOSSA<br /><span class="text-6xl font-extrabold"
                                 style="font-family:'Dubai Bold'">PLATAFORMA</span></h1>
