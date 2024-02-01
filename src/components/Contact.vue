@@ -1,12 +1,14 @@
 <template>
     <section id="contact" class="body-font bg-primary text-white" style="font-family:'Dubai Regular'">
         <!-- data-aos="zoom-in"> -->
-        <div class="mx-auto flex flex-col items-center justify-between px-10 py-24 text-center font-bold lg:flex-row"> 
+        <div class="mx-auto flex flex-col items-center justify-between px-10 py-24 text-center font-bold lg:flex-row">
             <div class="mb-5 flex flex-row justify-center">
-                <a href="https://www.instagram.com/" target="_blank" class="btn btn-circle mr-2">
+                <a href="https://www.instagram.com/momentum.invest/" target="_blank" class="btn btn-circle mr-2">
                     <FontAwesomeIcon icon="fa-brands fa-instagram" class="h-8 w-8" />
                 </a>
-                <a target="_blank" class="btn btn-circle">
+                <a target="_blank"
+                    href="https://api.whatsapp.com/send?phone=5544999602068&text=Ol%C3%A1,%20vim%20pelo%20site."
+                    class="btn btn-circle">
                     <FontAwesomeIcon icon="fa-brands fa-whatsapp" class="h-8 w-8" />
                 </a>
             </div>
@@ -14,7 +16,8 @@
                 <span class="text-5xl uppercase">Vamos conversar?</span>
             </div>
             <div>
-                <a>
+                <a
+                    href="https://api.whatsapp.com/send?phone=5544999602068&text=Ol%C3%A1,%20vim%20pelo%20site.">
                     <button class="btn">Entre em contato</button>
                 </a>
             </div>
