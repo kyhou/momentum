@@ -61,7 +61,7 @@
                     data-aos=""> <!-- zoom-in -->
                     <div
                         class="mt-44 w-full text-center text-[2rem] uppercase leading-none text-white sm:text-[4rem] md:text-[5rem] lg:mt-28 lg:text-[6rem]">
-                        Este é o seu<br /><span class="text-[3.5rem] font-bold xs:text-[4rem] sm:text-[7rem] md:text-[8rem] lg:text-[9rem]"
+                        Este é o seu<br /><span class="text-[3.5rem] font-bold xs:text-[3.8rem] sm:text-[7rem] md:text-[8rem] lg:text-[9rem]"
                             style="font-family:'Dubai Bold'">momento</span></div>
                 </div>
             </section>
@@ -75,7 +75,7 @@
                     <div class="items-left mb-20 flex flex-col flex-wrap text-left" data-aos=""> <!-- slide-right -->
                         <h1 class="title-font text-xl font-bold text-white lg:text-4xl">Como funciona a</h1>
                         <br />
-                        <h1 class="title-font text-[4rem] font-bold uppercase leading-none text-white lg:text-[8rem]"
+                        <h1 class="title-font text-[3rem] font-bold uppercase leading-none text-white sm:text-[4rem] md:text-[6rem] lg:text-[8rem]"
                             style="font-family:'Dubai Bold'">Momentum</h1>
                     </div>
                     <div class="-m-4 flex flex-wrap text-center">
@@ -83,7 +83,7 @@
                             <div class="h-96 border-[3px] border-white px-12">
                                 <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.01
                                 </p>
-                                <div class="max-md:-mx-12">
+                                <div class="max-md:-mx-11">
                                     <h2 class="title-font mb-2 text-2xl font-bold uppercase text-white"
                                         style="font-family:'Dubai Bold'">Entender o Cliente</h2>
                                     <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
@@ -96,7 +96,7 @@
                             <div class="h-96 border-[3px] border-white px-12">
                                 <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.02
                                 </p>
-                                <div class="max-md:-mx-12">
+                                <div class="max-md:-mx-11">
                                     <h2 class="title-font mb-2 text-2xl font-bold uppercase text-white"
                                         style="font-family:'Dubai Bold'">Planejamento</h2>
                                     <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
@@ -111,7 +111,7 @@
                             <div class="h-96 border-[3px] border-white px-12">
                                 <p class="-mt-6A -ml-12 mb-4 w-min bg-white p-2 text-left text-2xl font-bold text-black">.03
                                 </p>
-                                <div class="max-md:-mx-12">
+                                <div class="max-md:-mx-11">
                                     <h2 class="title-font mb-2 text-2xl font-bold uppercase text-white"
                                         style="font-family:'Dubai Bold'">Implementação</h2>
                                     <hr class="hr-title m-auto my-5 w-full !border-[#fabd05]" />
@@ -195,7 +195,7 @@
                 <div class="flex">
                     <img v-if="window.width >= 1024" class="mt-20 w-3/4 object-contain" src="/src/assets/imgs/plataforma.png">
                     <div class="ml-5 flex w-2/3 flex-col justify-center lg:ml-20 lg:mt-20 lg:w-1/4">
-                        <h1 class="mb-10 text-4xl">NOSSA<br /><span class="text-6xl font-extrabold"
+                        <h1 class="mb-10 text-4xl">NOSSA<br /><span class="text-[2.7rem] font-extrabold sm:text-6xl"
                                 style="font-family:'Dubai Bold'">PLATAFORMA</span></h1>
                         <p class="text-xl">
                             Bem-vindo à nossa plataforma, a sua parceira confiável para otimizar seus investimentos. Nossa
