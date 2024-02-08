@@ -65,11 +65,6 @@
                                         <input v-model="active" id="active" name="active" type="checkbox"
                                             class="form-control toggle" checked />
                                     </label>
-                                    <label class="label cursor-pointer">
-                                        <span class="label-text">Travado 2y</span>
-                                        <input v-model="locked" id="locked" name="locked" type="checkbox"
-                                            class="form-control toggle" />
-                                    </label>
                                 </div>
                             </div>
 
@@ -122,7 +117,6 @@ import { Form, Field, ErrorMessage } from "vee-validate";
 import * as yup from "yup";
 import Page from '../components/Page.vue'
 import CurrencyInput from '../components/CurrencyInput.vue';
-// import { date_helpers } from '../helpers/date_helpers';
 import moment from 'moment';
 import EventBus from "../common/EventBus";
 
@@ -190,13 +184,6 @@ export default {
                     sortable: true,
                     autoSize: true,
                     size: 100,
-                },
-                {
-                    prop: "locked",
-                    name: "Travado",
-                    sortable: true,
-                    autoSize: true,
-                    size: 110
                 },
                 {
                     prop: "active",
@@ -313,7 +300,6 @@ export default {
             },
             usersDetails: [],
             value: null,
-            locked: null,
             active: null,
         };
     },
@@ -363,7 +349,6 @@ export default {
             this.loading = true;
 
             aporte.active = this.active;
-            aporte.locked = this.locked;
 
             if (!aporte.editMode) {
                 AportesAdminPageService.newAporte(aporte).then(
@@ -425,13 +410,11 @@ export default {
                 user: props.model.userId,
                 value: aporteValue,
                 date: moment(props.model.date, "DD/MM/YYYY").format("YYYY-MM-DD"),
-                locked: props.model.locked,
                 active: props.model.active,
                 type: props.model.type,
                 editMode: true
             });
 
-            this.locked = props.model.locked;
             this.active = props.model.active;
         },
         openAddModal() {
