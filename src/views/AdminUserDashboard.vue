@@ -26,8 +26,8 @@
                                         </div>
                                     </div>
                                     <p class="text-blueGray-400 mt-4 text-sm"><span class="mr-2 text-emerald-500">
-                                            <FontAwesomeIcon icon="fa-solid fa-arrow-up" /> {{ percentageBalanceLastMonth }}
-                                        </span><span class="whitespace-nowrap">Desde o ultimo mês</span></p>
+                                        <FontAwesomeIcon icon="fa-solid fa-arrow-up" /> {{ percentageBalanceFull }}
+                                        </span><span class="whitespace-nowrap">Desde o início</span></p>
                                 </div>
                             </div>
                         </div>
@@ -37,20 +37,21 @@
                                     <div class="flex flex-wrap">
                                         <div class="w-full max-w-full flex-1 grow pr-4">
                                             <h5 class="text-blueGray-400 text-xs font-bold uppercase">Performance</h5><span
-                                                class="text-blueGray-700 text-xl font-semibold">{{
-                                                    percentagePerformanceTotal }}</span>
+                                                class="text-blueGray-700 text-xl font-semibold">{{ new
+                                                    Intl.NumberFormat('pt-BR', {
+                                                        style: 'currency', currency: 'BRL'
+                                                    }).format(performanceTotal) }}</span>
                                         </div>
                                         <div class="w-auto flex-initial pl-4">
                                             <div
                                                 class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 p-3 text-center text-white shadow-lg">
-                                                <FontAwesomeIcon icon="fa-solid fa-percent" />
+                                                <FontAwesomeIcon icon="fa-solid fa-dollar-sign" />
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="text-blueGray-400 mt-4 text-sm"><span class="mr-2 text-emerald-500">
-                                            <FontAwesomeIcon icon="fa-solid fa-arrow-up" /> {{
-                                                percentagePerformanceLastMonth }}
-                                        </span><span class="whitespace-nowrap">Desde o ultimo mês</span></p>
+                                    <p class="text-blueGray-400 mt-4 text-sm"><span class="mr-1 text-emerald-500">
+                                            <FontAwesomeIcon icon="fa-solid fa-dollar-sign" />
+                                        </span><span class="whitespace-nowrap">Em relação ao capital aportado</span></p>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +78,6 @@
 <script>
 import UserDashboardService from "../services/user_dashboard.service";
 import UsersDetailsService from "../services/users_details.service";
-import ProfitsService from "../services/profits.service";
 import Page from '../components/Page.vue'
 import * as yup from "yup";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -217,7 +217,6 @@ export default {
             message: "",
             loading: false,
             userName: "",
-            aportes: [],
             totalBalance: 0,
             currencyOptions: {
                 "locale": "pt-BR",
@@ -233,9 +232,9 @@ export default {
             },
             today: new Date().getDate(),
             contractIds: [],
-            percentageBalanceLastMonth: "0,00%",
+            percentageBalanceFull: "0,00%",
             percentagePerformanceLastMonth: "0%",
-            percentagePerformanceTotal: "0,00%",
+            performanceTotal: "R$ 0,00",
             expertBalancePercentage: 0,
             securityBalancePercentage: 0,
             transactionDaysLimit: 0,
@@ -249,7 +248,6 @@ export default {
     async mounted() {
         const expertDataset = this.lineChartData.datasets.find(x => x.label.toLowerCase() == "expert");
         const securityDataset = this.lineChartData.datasets.find(x => x.label.toLowerCase() == "security");
-        var lastMonthProfitGlobal = 0;
 
         UsersDetailsService.getUserName(this.route.params.userId).then(
             response => {
@@ -264,8 +262,6 @@ export default {
 
         UserDashboardService.getUserAportes(this.route.params.userId).then(
             response => {
-                this.aportes = response.data;
-
                 expertDataset.data = [];
                 securityDataset.data = [];
 
@@ -308,14 +304,7 @@ export default {
                     }
 
                     this.totalBalance += +element.availableProfit + +element.value;
-
-                    if (element.monthProfits && element.monthProfits.length > 0) {
-                        lastMonthProfitGlobal += +element.monthProfits[element.monthProfits.length - 1].profit;
-                    }
                 });
-
-                var lastMonthBalance = ((this.totalBalance / lastMonthProfitGlobal) - 1) * 100;
-                this.percentageBalanceLastMonth = `${(Number.isFinite(lastMonthBalance) ? lastMonthBalance : 0).toFixed(2)}%`;
 
                 this.$refs.lineChart.updateChart(this.lineChartData, this.lineChartOptions);
             },
@@ -336,20 +325,14 @@ export default {
 
         this.$refs.doughnutChart.updateChart(this.doughnutChartData, this.doughnutChartOptions);
 
-        var performancePseudoValue = 100;
-
         try {
-            const globalProfits = await ProfitsService.getUserProfits(this.route.params.userId);
+            const globalProfits = (await UserDashboardService.getUserProfits(this.route.params.userId)).data.profits;
+            this.performanceTotal = globalProfits;
 
-            if (globalProfits.data) {
-                globalProfits.data.forEach((profit) => {
-                    performancePseudoValue *= (profit.value / 100) + 1;
-                });
+            const aportesInitialSum = (await UserDashboardService.getAportesInitialSum(this.route.params.userId)).data.aportesSum;
+            const aportesGlobalProfitPercentage = (((aportesInitialSum + globalProfits) / aportesInitialSum) - 1 ) * 100;
+            this.percentageBalanceFull = `${(Number.isFinite(aportesGlobalProfitPercentage) ? aportesGlobalProfitPercentage : 0).toFixed(2)}%`;
 
-                this.percentagePerformanceLastMonth = `${globalProfits.data[globalProfits.data.length - 1].value}%`;
-
-                this.percentagePerformanceTotal = `${(((performancePseudoValue / 100) - 1) * 100).toFixed(2)}%`;
-            }
         } catch (error) {
             if (error.response && error.response.status === 403) {
                 this.router.push("/dashboard");

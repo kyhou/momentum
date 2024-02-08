@@ -9,7 +9,7 @@ class AportesAdminPageService {
             API_URL,
             { headers: authHeader() }
         );
-    };
+    }
 
     updateAporte(aporte) {
         return http.post(
@@ -17,7 +17,7 @@ class AportesAdminPageService {
             { aporte },
             { headers: authHeader() }
         );
-    };
+    }
 
     newAporte(aporte) {
         return http.post(
@@ -25,7 +25,7 @@ class AportesAdminPageService {
             { aporte },
             { headers: authHeader() }
         );
-    };
+    }
 
     generateContract(aporteId) {
         return http.post(
@@ -33,7 +33,7 @@ class AportesAdminPageService {
             { aporteId },
             { headers: authHeader() }
         );
-    };
-};
+    }
+}
 
 export default new AportesAdminPageService();

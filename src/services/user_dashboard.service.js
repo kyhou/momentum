@@ -23,6 +23,14 @@ class UserDashboadService {
     newTransaction(userId, value) {
         return http.post(API_URL + `newTransaction/${userId}`, {value}, { headers: authHeader() })
     }
+        
+    getUserProfits(userId) {
+        return http.get(API_URL + `getUserProfits/${userId}`, { headers: authHeader() })
+    }
+        
+    getAportesInitialSum(userId) {
+        return http.get(API_URL + `getAportesInitialSum/${userId}`, { headers: authHeader() })
+    }
 }
 
 export default new UserDashboadService();

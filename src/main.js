@@ -11,7 +11,8 @@ import {
     faReceipt,
     faHandshake,
     faArrowUp,
-    faPercent
+    faPercent,
+    faDollarSign
 } from '@fortawesome/free-solid-svg-icons';
 import { faChartBar } from '@fortawesome/free-regular-svg-icons';
 import {
@@ -34,7 +35,8 @@ library.add(
     faHandshake,
     faChartBar,
     faArrowUp,
-    faPercent
+    faPercent,
+    faDollarSign
 );
 
 setup_interceptors_service(store);
