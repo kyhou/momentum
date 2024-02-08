@@ -105,7 +105,7 @@
     </main>
     <footer class="footer footer-center bg-footer p-4 text-neutral lg:px-24">
         <div>
-            <p>Copyright © Momentum - 2023. Todos os direitos reservados.</p>
+            <p>Copyright © Momentum - {{ new Date().getFullYear() }}. Todos os direitos reservados.</p>
         </div>
     </footer>
 </template>
